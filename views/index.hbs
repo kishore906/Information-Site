@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Information Website</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CAREERS</a></li>
+            {{#if user}}
+              <li><a href="/logout">LOGOUT</a></li>
+            {{else}}
+              <li><a href="/registration">SIGNUP</a></li>
+              <li><a href="/login">LOGIN</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+      <h3>ABOUT WEBSITE</h3>
+      <p>In
+        <strong>Information Technology</strong>
+        field we have different areas or specializations such as Data Science,
+        Data Analysis, Web Development, Mobile Application Development, Cloud
+        Computing etc. So, this website will provide detailed information about
+        few imporatnt fields in Current IT trend and career opportunities.</p>
+    </div>
+
+    <!-- career options section -->
+
+    <div class="career-section">
+      <h3>CAREER OPTIONS</h3>
+    </div>
+
+    <div class="container">
+      <div class="item">
+        <img src="/1.png" alt="" style="width:100%" />
+        <h4>Web Development</h4>
+        <p>Web development is the work involved in developing a Web site for the
+          Internet or an intranet. It includes aspects such as web design, web
+          publishing, web programming, and database management.</p>
+        <a href="/webdevelopment">Read More</a>
+      </div>
+
+      <div class="item">
+        <img src="/2.jpg" alt="" style="width:100%" />
+        <h4>Data Science</h4>
+        <p>Data science is an inter-disciplinary field that uses scientific
+          methods, processes, algorithms and systems to extract knowledge and
+          insights from many structural and unstructured data.</p>
+        <a href="/DataScience">Read More</a>
+      </div>
+
+      <div class="item">
+        <img src="/3.jpg" alt="" style="width:100%" />
+        <h4>Cloud Computing</h4>
+        <p>Cloud computing is the delivery of different services through the
+          Internet. These resources include tools and applications like data
+          storage, servers, databases, networking, and software. Services can be
+          both public and private</p>
+        <a href="/cloudcomputing">Read More</a>
+      </div>
+    </div>
+
+    <div class="career-section">
+      <h3>Click below link to Search for Colleges</h3>
+    </div>
+    <div class="search-btn">
+      <button><a href="/search_colleges">Search</a></button>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      Copyright &copy; Website Name. All rights reserved.
+    </div>
+  </body>
+</html>

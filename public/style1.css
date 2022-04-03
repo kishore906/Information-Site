@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noticia Text", serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #f0f8ff;
+}
+
+.flex-container > div {
+  background-color: #faebd7;
+  width: 200px;
+  margin: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .flex-container > div {
+    margin-left: 150px;
+  }
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 400px;
+  height: 320px;
+  margin: 40px;
+  background: #7fffd4;
+  color: #000;
+}
+
+.content h3 {
+  text-align: center;
+  margin: 20px;
+  border-bottom: 2px solid red;
+}
+
+.content p {
+  margin-left: 50px;
+  padding: 10px;
+  text-align: left;
+}
+
+.links {
+  text-align: center;
+  margin: 10px;
+}
+
+.links button {
+  padding: 15px;
+  margin: 15px;
+  border: 2px solid #006400;
+  border-radius: 10px;
+  background: #e0ffff;
+}
+
+.links a {
+  text-decoration: none;
+  font-family: "Noticia Text", serif;
+  font-size: 15px;
+  color: #000;
+}
+
+.chart-section {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  height: auto;
+}
+
+.chart-section canvas {
+  text-align: center;
+}

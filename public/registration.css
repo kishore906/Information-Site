@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noticia Text", serif;
+  background: #fffafa;
+}
+
+.form-section {
+  width: 350px;
+  background: #fff8dc;
+  padding: 40px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 4px #8b0000;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  font-family: "Noticia Text", serif;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #2f4f4f;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background: #2f4f4f;
+  border: 1px solid #778899;
+  color: #fff;
+}
+
+h4 {
+  padding: 20px;
+  font-size: 15px;
+}

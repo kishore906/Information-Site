@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>DataScience page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style1.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript">
+      $(function(){ $(".responsive").click(function(){
+      $(".nav-bar-right").toggleClass("active"); }); });
+    </script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            {{#if user}}
+              <li><a href="/logout">LOGOUT</a></li>
+            {{else}}
+              <li><a href="/registration">SIGNUP</a></li>
+              <li><a href="/login">LOGIN</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About course Section -->
+    <div class="about">
+      <h3>ABOUT DATA SCIENCE</h3>
+      <p><strong>Data science</strong>
+        is the field of study that combines domain expertise, programming
+        skills, and knowledge of mathematics and statistics to extract
+        meaningful insights from data. It uses techniques and theories drawn
+        from many fields within the context of mathematics, statistics, computer
+        science, domain knowledge and information science and generate insights
+        which analysts and business users can translate into tangible business
+        value.</p>
+    </div>
+
+    <!-- job roles section -->
+    <div class="career-section">
+      <h3>JOB ROLES</h3>
+    </div>
+
+    <div class="flex-container">
+      <div>Data Scientist</div>
+      <div>Data Engineer</div>
+      <div>Data Analyst</div>
+      <div>Business Analyst</div>
+      <div>Datawarehouse Architect</div>
+    </div>
+
+    <!-- Skills section -->
+
+    <div class="career-section">
+      <h3>SKILLS NEED TO LEARN</h3>
+    </div>
+
+    <div class="skills-section">
+      <div class="content">
+        <h3>SKILLS REQUIRED (DATA SCIENTIST)</h3>
+        <p><strong>Programming Skills:</strong> R, Phython </p>
+        <p><strong>Database Querying:</strong> SQL </p>
+        <p>Probability and Statistics, Linear Algebra</p>
+        <p>Machine Learning Algorithms, Deep Learning Algorithms and NLP</p>
+        <p>Data Visualization and Data Analysis</p>
+      </div>
+
+      <div class="content">
+        <h3>SKILLS REQUIRED (DATA ENGINEER)</h3>
+        <p><strong>Programming Skills:</strong> Phython</p>
+        <p><strong>Database Knowledge:</strong> SQL and NoSQL</p>
+        <p><strong>Datawarehousing:</strong> Hadoop, MapReduce, Apache</p>
+        <p>Knowledge on Operating Systems</p>
+        <p>Machine Learning Algorithms</p>
+      </div>
+
+      <div class="content">
+        <h3>SKILLS REQUIRED (DATA ANALYST)</h3>
+        <p><strong>Programming Languages:</strong> R, Python</p>
+        <p><strong>Database:</strong> SQL</p>
+        <p><strong>Data Visualization using:</strong> Tableau, Power BI</p>
+        <p><strong>Data Analysis using:</strong> Pandas and Numpy</p>
+        <p>Microsoft Excel</p>
+        <p>Machine Learning Algorithms</p>
+      </div>
+    </div>
+
+    <!-- Average salary section -->
+
+    <div class="career-section">
+      <h3>AVERGAE SALARIES FOR DATA SCIENCE PATHS</h3>
+    </div>
+
+    <div class="chart-section">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="/chart1.js"></script>
+
+    <!-- Resources section-->
+
+    <div class="career-section">
+      <h3>RESOURCES SECTION</h3>
+    </div>
+
+    <div class="links">
+      <button><a
+          href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+          target="_blank"
+        >freeCodeCamp</a></button>
+      <button><a
+          href="https://www.youtube.com/user/edurekaIN/featured"
+          target="_blank"
+        >Edureka</a></button>
+      <button><a
+          href="https://www.youtube.com/user/Simplilearn"
+          target="_blank"
+        >Simplilearn</a></button>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      Copyright &copy; Website Name. All rights reserved.
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.collegeImage img {
+  width: 100%;
+  height: 600px;
+}
+
+.college_info {
+  width: 900px;
+  background-color: rgb(247, 250, 252);
+  height: auto;
+  margin: 20 auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.college_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.college_header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.college_header h2 {
+  font-size: 25px;
+  font-family: "Noticia Text", serif;
+  color: rgb(4, 4, 59);
+}
+
+.college_rating {
+  font-family: "Noticia Text", serif;
+  font-size: 18px;
+  padding-right: 10px;
+  line-height: 30px;
+}
+
+.college_intro p {
+  margin: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: "Noticia Text", serif;
+  font-size: 15px;
+}
+
+#save_btn {
+  width: 150px;
+  margin-left: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  font-size: 15px;
+  font-family: "Noticia Text", serif;
+  border-radius: 50px;
+  background-color: burlywood;
+}
+
+.header h4 {
+  font-size: 28px;
+  font-family: "Noticia Text", serif;
+  text-align: center;
+  margin: 40px;
+}
+
+.course_info {
+  display: flex;
+  justify-content: space-center;
+  align-items: center;
+  width: 900px;
+  height: 300px;
+  background-color: rgb(247, 250, 252);
+  margin: 20 auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course_details p {
+  font-size: 15px;
+  font-family: "Noticia Text", serif;
+  text-align: left;
+  line-height: 2;
+  margin: 60px;
+}
+
+.tuition_fee {
+  margin-left: 150px;
+  color: rgb(4, 4, 59);
+  font-family: "Noticia Text", serif;
+}
+
+.tuition_fee p {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.accomodation_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accomodation_section {
+  font-family: "Noticia Text", serif;
+}
+
+.list_details {
+  background-color: rgb(247, 250, 252);
+  width: 600px;
+  margin: 10px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_details img {
+  width: 100px;
+  height: 100px;
+}
+
+.list_details p {
+  margin-left: 10px;
+  line-height: 2;
+}
+
+#map {
+  width: 500px;
+  height: 470px;
+}

@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Information Website</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/registration.css" />
+    <link rel="stylesheet" type="text/css" href="/search.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            <li><a href="/search_colleges">SEARCH</a></li>
+            <li><a href="/logout" class="">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="text-align: center; margin: 20px;">Welcome To Your Add List Page</h2>
+    <table class="center">
+      <thead>
+        <tr>
+          <th>College_Name</th>
+          <th>Course</th>
+          <th>Address</th>
+          <th>College_City</th>
+          <th>College_State</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each listData}}
+          <tr>
+            <td>{{college_name}}</td>
+            <td>{{college_field}}</td>
+            <td>{{college_address}}</td>
+            <td>{{college_city}}</td>
+            <td>{{college_state}}</td>
+            <td><a href="/addlist/{{id}}"><i
+                  class="fas fa-trash-alt"
+                  style="text-decoration: none; font-size: 20px; color:black"
+                ></i></a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>

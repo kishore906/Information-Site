@@ -1,0 +1,154 @@
+<hmtl>
+  <head>
+    <title>College Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/collegecss.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin="">
+  </script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            <li><a href="/search_colleges" class="active">SEARCH</a></li>
+            <li><a href="/logout" class="">LOGOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!----->
+    <div class="collegeImage">
+      <img src="/collegeImages/{{collegeData.imgae_id}}.jpg" alt="no Image" />
+    </div>
+
+    <!-- College Info div -->
+    <div class="college_info">
+      <div class="college_header">
+        <img src="/collegeLogos/{{collegeData.logo_id}}.jpg" alt="" />
+        <h2>{{collegeData.college_name}}</h2>
+        <div class="college_rating">
+          <p><strong>Average rating</strong></p>
+          <p style="font-size: 15px; text-align:center;">
+            <strong>{{collegeData.average_rating}}/5</strong>
+          </p>
+        </div>
+      </div>
+      <div class="college_intro">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          officia nemo porro recusandae deserunt, ratione reiciendis eum alias,
+          corrupti officiis saepe ullam fuga adipisci aut distinctio, iste
+          expedita veniam! Ipsam! Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Accusantium officia nemo porro recusandae deserunt,
+          ratione reiciendis eum alias, corrupti officiis saepe ullam fuga
+          adipisci aut distinctio, iste expedita veniam! Ipsam!</p>
+      </div>
+
+      <form action="/collegeinfo" method="POST">
+        <input type="hidden" name="id" value="{{collegeData.college_id}}" />
+        <button type="submit" id="save_btn"><i class="far fa-heart"></i>
+          Save to List</button>
+      </form>
+    </div>
+
+    <!-- Course section -->
+    <div class="header">
+      <h4>Course Details</h4>
+    </div>
+    <div class="course_info">
+      <div class="course_details">
+        <p><strong>Course Name: </strong>{{collegeData.college_field}}<br />
+          <strong>Broad Field: </strong>Information Technology<br />
+          <strong>Course Level: </strong>Master Degree(coursework)<br />
+          <strong>Course Language: </strong>English<br />
+          <strong>Duration(Weeks): </strong>{{collegeData.course_duration}}<br
+          />
+          <strong>Course Intakes: </strong>February, July<br />
+          <strong>Course Structure and Handbook: </strong><a
+            href="{{collegeData.course_link}}"
+            target="_blank"
+          >Link for course</a></p>
+      </div>
+      <div class="tuition_fee">
+        <p><strong>Tuition Fee</strong></p>
+        <p style="font-size: 25px; text-align:center;">$AU
+          {{collegeData.tuition_fee}}</p>
+      </div>
+    </div>
+
+    <!-- Accomodation Section -->
+    <div class="header">
+      <h4>Nearest Accommodations</h4>
+    </div>
+    <div class="accomodation_section">
+      <div class="list-section">
+      <div class="list_details">
+        <img src="/accommodationImages/{{collegeData.add_image1}}.jpg" alt="" />
+        <p><strong>{{collegeData.address_name1}}</strong><br />
+          <strong>Address:</strong>{{collegeData.address1}}<br />
+          <strong>Phone: </strong>{{collegeData.phone_num1}}</p>
+      </div>
+      <div class="list_details">
+        <img src="/accommodationImages/{{collegeData.add_image2}}.jpg" alt="" />
+        <p><strong>{{collegeData.address_name2}}</strong><br />
+          <strong>Address:</strong>{{collegeData.address2}}<br />
+          <strong>Phone: </strong>{{collegeData.phone_num2}}</p>
+      </div>
+      <div class="list_details">
+        <img src="/accommodationImages/{{collegeData.add_image3}}.jpg" alt="" />
+        <p><strong>{{collegeData.address_name3}}</strong><br />
+          <strong>Address:</strong>{{collegeData.address3}}<br />
+          <strong>Phone: </strong>{{collegeData.phone_num3}}</p>
+      </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    
+    <!-- copyright section -->
+    <div class="copyright">
+      Copyright &copy; Website Name. All rights reserved.
+    </div>
+
+    <script>
+     // const save_btn = document.getElementById('save_btn');
+      //save_btn.addEventListener('click', function() { alert("Saved to List") });
+
+      //console.log([{{collegeData.latitude}}, {{collegeData.longitude}}]);  
+      //const name = "{{collegeData.college_name}}";
+      
+      const coords = [[{{collegeData.latitude}}, {{collegeData.longitude}}, "{{collegeData.college_name}}"], [{{collegeData.accom1_lat}}, {{collegeData.accom1_long}}, "{{collegeData.address_name1}}"], [{{collegeData.accom2_lat}}, {{collegeData.accom2_long}}, "{{collegeData.address_name2}}"], [{{collegeData.accom3_lat}}, {{collegeData.accom3_long}}, "{{collegeData.address_name3}}"]];
+
+      const map = L.map('map').setView([{{collegeData.latitude}}, {{collegeData.longitude}}], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+for(let i = 0; i < coords.length; i++){
+
+marker = new L.marker([coords[i][0],coords[i][1]]).addTo(map)
+    .bindPopup(coords[i][2])
+    .openPopup();
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>CloudComputing page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style1.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript">
+      $(function(){ $(".responsive").click(function(){
+      $(".nav-bar-right").toggleClass("active"); }); });
+    </script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            {{#if user}}
+              <li><a href="/logout">LOGOUT</a></li>
+            {{else}}
+              <li><a href="/registration">SIGNUP</a></li>
+              <li><a href="/login">LOGIN</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About course Section -->
+    <div class="about">
+      <h3>ABOUT CLOUDCOMPUTING</h3>
+      <p><strong>Cloud computing</strong>
+        is the delivery of different services through the Internet. These
+        resources include tools and applications like data storage, servers,
+        databases, networking, and software. Cloud-based storage makes it
+        possible to save files to a remote database and retrieve them on demand.
+        Services can be both public and private</p>
+    </div>
+
+    <!-- job roles section -->
+    <div class="career-section">
+      <h3>JOB ROLES</h3>
+    </div>
+
+    <div class="flex-container">
+      <div>Cloud Architect</div>
+      <div>Application Developer</div>
+      <div>Cloud Engineer</div>
+      <div>Cloud Administrator</div>
+      <div>Cloud security manager</div>
+    </div>
+
+    <!-- Skills section -->
+
+    <div class="career-section">
+      <h3>SKILLS NEED TO LEARN</h3>
+    </div>
+
+    <div class="skills-section">
+      <div class="content">
+        <h3>BASIC SKILLS</h3>
+        <p><strong>Languages:</strong> Phython, ruby, perl, .net</p>
+        <p><strong>Database Skills:</strong> SQL, MYSQL, MongoDB</p>
+        <p><strong>Cloud Platforms:</strong> AWS, Microsoft Azure</p>
+        <p>Linux Environment</p>
+      </div>
+
+      <div class="content">
+        <h3>OTHER SKILLS</h3>
+        <p><strong>API and WEBSERVICES:</strong> XML, SOAP</p>
+        <p><strong>Virtualization:</strong>EC2, Lambdas</p>
+        <p>Networking</p>
+        <p>Developmental Operations(DevOps)</p>
+        <p>Information Security and Recovery</p>
+      </div>
+
+      <div class="content">
+        <h3>AVAILABLE CERTIFICATIONS</h3>
+        <p>Amazon Web Services Certification</p>
+        <p>Microsoft Azure Certification</p>
+        <p>Google Cloud Certification</p>
+      </div>
+    </div>
+
+    <!-- Average salary section -->
+
+    <div class="career-section">
+      <h3>AVERGAE SALARY BY DIFFERENT COUNTRIES</h3>
+    </div>
+
+    <div class="chart-section">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="/chart2.js"></script>
+
+    <!-- Resources section-->
+
+    <div class="career-section">
+      <h3>RESOURCES SECTION</h3>
+    </div>
+
+    <div class="links">
+      <button><a
+          href="https://www.youtube.com/channel/UCCktnahuRFYIBtNnKT5IYyg"
+          target="_blank"
+        >Intellipaat</a></button>
+      <button><a
+          href="https://www.youtube.com/user/edurekaIN/featured"
+          target="_blank"
+        >Edureka</a></button>
+      <button><a
+          href="https://www.youtube.com/user/Simplilearn"
+          target="_blank"
+        >Simplilearn</a></button>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      Copyright &copy; Website Name. All rights reserved.
+    </div>
+
+  </body>
+</html>

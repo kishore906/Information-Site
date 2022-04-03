@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Webdevelopment page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style1.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript">
+      $(function(){ $(".responsive").click(function(){
+      $(".nav-bar-right").toggleClass("active"); }); });
+    </script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            {{#if user}}
+              <li><a href="/logout">LOGOUT</a></li>
+            {{else}}
+              <li><a href="/registration">SIGNUP</a></li>
+              <li><a href="/login">LOGIN</a></li>
+            {{/if}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About course Section -->
+    <div class="about">
+      <h3>ABOUT WEB DEVELOPMENT</h3>
+      <p><strong>Web development</strong>
+        is the work involved in developing a Web site for the Internet (World
+        Wide Web) or an intranet (a private network). Web development can range
+        from developing a simple single static page of plain text to complex
+        Web-based Internet applications (Web apps), electronic businesses, and
+        social network services. A more comprehensive list of tasks to which Web
+        development commonly refers, may include Web engineering, Web design,
+        Web content development, client-side/server-side scripting, Web server
+        and network security configuration, and e-commerce development.</p>
+    </div>
+
+    <!-- job roles section -->
+    <div class="career-section">
+      <h3>JOB ROLES</h3>
+    </div>
+
+    <div class="flex-container">
+      <div>FrontEnd Developer</div>
+      <div>BackEnd Developer</div>
+      <div>FullStack Web Developer</div>
+      <div>JavaScript Developer</div>
+      <div>PHP Developer</div>
+    </div>
+
+    <!-- Skills section -->
+
+    <div class="career-section">
+      <h3>SKILLS NEED TO LEARN</h3>
+    </div>
+
+    <div class="skills-section">
+      <div class="content">
+        <h3>SKILLS REQUIRED (FRONT END)</h3>
+        <p><strong>Languages:</strong> Html 5, CSS and JavaScript</p>
+        <p><strong>Extended Languages:</strong> Less, Sass, TypeScript</p>
+        <p><strong>Css Frameworks:</strong> Bootstrap 4, Foundation</p>
+        <p><strong>JavaScript Library:</strong> JQuery</p>
+        <p><strong>JavaScript Frameworks:</strong>
+          Angular.js, React.js, Vue.js</p>
+      </div>
+
+      <div class="content">
+        <h3>SKILLS REQUIRED (BACK END)</h3>
+        <p><strong>Languages:</strong> PHP, C#, Python, Node js, Ruby</p>
+        <p><strong>Frameworks:</strong> Asp.net mvc, Django, rails</p>
+        <p><strong>PHP Frameworks:</strong> Laravel</p>
+        <p><strong>Database:</strong> Sql, MySql, Sql Server</p>
+        <p><strong>CMS:</strong> WordPress, Drupal</p>
+      </div>
+    </div>
+
+    <!-- Average salary section -->
+
+    <div class="career-section">
+      <h3>AVERGAE SALARY BY DIFFERENT COUNTRIES</h3>
+    </div>
+
+    <div class="chart-section">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="/chart.js"></script>
+
+    <!-- Resources section-->
+
+    <div class="career-section">
+      <h3>RESOURCES SECTION</h3>
+    </div>
+
+    <div class="links">
+      <button><a
+          href="https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg"
+          target="_blank"
+        >Net Ninja</a></button>
+      <button><a
+          href="https://www.youtube.com/user/TechGuyWeb"
+          target="_blank"
+        >Traversy Media</a></button>
+      <button><a
+          href="https://www.youtube.com/c/Freecodecamp"
+          target="_blank"
+        >FreeCodeCamp</a></button>
+    </div>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      Copyright &copy; Website Name. All rights reserved.
+    </div>
+
+  </body>
+</html>

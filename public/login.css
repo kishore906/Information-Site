@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Noticia+Text&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noticia Text", serif;
+  background: #fffafa;
+}
+
+.login-section {
+  width: 350px;
+  background: #dcdcdc;
+  padding: 40px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 4px #c0c0c0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  font-family: "Noticia Text", serif;
+  font-size: 15px;
+  width: 100%;
+  border: 1px solid #2f4f4f;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  width: 40%;
+  background: #800080;
+  border: 1px solid #778899;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #8b008b;
+}
+
+h4 {
+  padding: 20px;
+}

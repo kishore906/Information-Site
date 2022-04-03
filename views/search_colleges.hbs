@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Search College</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="/search.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+
+    <!-- Header Section (Navigation Bar) -->
+
+    <div class="wrapper">
+      <div class="nav-bar">
+        <div class="responsive">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="nav-bar-left">
+          <h3>Information Website</h3>
+        </div>
+        <div class="nav-bar-right">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            <li><a href="/" class="">CAREERS</a></li>
+            <li><a href="/addlist" class="">MY LIST</a></li>
+            <li><a href="/logout" class="">LOGOUT</a></li>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search for Colleges Section -->
+    <div class="search-container">
+      <form action="/search_colleges" method="POST">
+        <select class="search-option" name="college_field">
+          <option value="">Select Course</option>
+          <option value="Master of Information Technology">Master of Information
+            Techonology</option>
+          <option value="Master of Data Science">Master of Data Science</option>
+        </select>
+        <select class="search-option" name="college_state">
+          <option value="">Select State</option>
+          <option value="New South Wales">New South Wales</option>
+          <option value="Victoria">Victoria</option>
+          <option value="Queensland">Queensland</option>
+          <option value="South Australia">South Australia</option>
+        </select>
+        <button type="submit" value="search" id="search_btn">Search</button>
+      </form>
+    </div>
+
+    {{#if message}}
+      <h3 align="center" class="message">{{message}}</h3>
+    {{/if}}
+
+    <table class="center">
+      <thead>
+        <tr>
+          <th>College_Name</th>
+          <th>Course</th>
+          <th>College_Address</th>
+          <th>College_City</th>
+          <th>College_State</th>
+          <th>More</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#if data}}
+          {{#each data}}
+            <tr>
+              <td>{{college_name}}</td>
+              <td>{{college_field}}</td>
+              <td>{{college_address}}</td>
+              <td>{{college_city}}</td>
+              <td>{{college_state}}</td>
+              <td><button id="btn_favourite"><a
+                    href="/collegeinfo/{{college_id}}"
+                  >More</a></button></td>
+            </tr>
+          {{/each}}
+        {{else}}
+          <tr>
+            <td colspan="6" align="center">No Data</td>
+          </tr>
+        {{/if}}
+      </tbody>
+    </table>
+  </body>
+</html>
